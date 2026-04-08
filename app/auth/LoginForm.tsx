@@ -48,7 +48,8 @@ export default function LoginForm() {
     }
   }
 
-  function handleSubmit() {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     const validationErrors = validate(values);
     setErrors(validationErrors);
 
@@ -61,7 +62,7 @@ export default function LoginForm() {
   }
 
   return (
-    <div className="flex flex-col gap-6 w-full">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full" noValidate>
       {/* Heading */}
       <div className="flex flex-col gap-2 text-center">
         <h2
@@ -99,6 +100,8 @@ export default function LoginForm() {
             value={values.email}
             onChange={(e) => handleChange("email", e.target.value)}
             placeholder="example@mailing.com"
+            aria-describedby="email-error"
+            aria-invalid={!!errors.emailError}
             className="
               flex-1 bg-transparent outline-none
               text-[#7d7d7d] font-normal text-xl
@@ -108,7 +111,7 @@ export default function LoginForm() {
           />
         </div>
         {errors.emailError && (
-          <p className="text-red-500 text-sm">{errors.emailError}</p>
+          <p id="email-error" className="text-red-500 text-sm">{errors.emailError}</p>
         )}
       </div>
 
@@ -133,6 +136,8 @@ export default function LoginForm() {
             value={values.password}
             onChange={(e) => handleChange("password", e.target.value)}
             placeholder="*************"
+            aria-describedby="password-error"
+            aria-invalid={!!errors.passwordError}
             className="
               flex-1 bg-transparent outline-none
               text-[#7d7d7d] font-normal text-xl
@@ -142,14 +147,13 @@ export default function LoginForm() {
           />
         </div>
         {errors.passwordError && (
-          <p className="text-red-500 text-sm">{errors.passwordError}</p>
+          <p id="password-error" className="text-red-500 text-sm">{errors.passwordError}</p>
         )}
       </div>
 
       {/* Submit button */}
       <button
-        type="button"
-        onClick={handleSubmit}
+        type="submit"
         disabled={isSubmitting}
         className="
           w-full bg-[#0a0e27] text-white font-semibold text-2xl
@@ -200,6 +204,6 @@ export default function LoginForm() {
           Registrate
         </a>
       </p>
-    </div>
+    </form>
   );
 }
