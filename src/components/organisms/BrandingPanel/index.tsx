@@ -1,7 +1,7 @@
 export function BrandingPanel() {
   return (
     <section
-      className="hidden md:flex flex-col justify-center items-start px-8 py-10 lg:w-1/2 lg:min-h-screen min-h-40"
+      className="hidden lg:flex flex-col justify-center items-start px-8 py-10 lg:w-1/2 lg:min-h-screen min-h-40"
       style={{
         background: "linear-gradient(135deg, #0a0e27 0%, #24338d 100%)",
       }}

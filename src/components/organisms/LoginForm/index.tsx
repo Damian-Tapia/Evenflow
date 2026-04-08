@@ -1,5 +1,6 @@
 "use client";
 
+import type React from "react";
 import { useState } from "react";
 import { Button } from "@/components/atoms/Button";
 import { Divider } from "@/components/atoms/Divider";

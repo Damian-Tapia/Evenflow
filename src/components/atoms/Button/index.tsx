@@ -1,3 +1,5 @@
+import type React from "react";
+
 interface ButtonProps {
   children: React.ReactNode;
   type?: "button" | "submit";
