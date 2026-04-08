@@ -10,13 +10,7 @@ export default function AuthPage() {
             EVENFLOW
           </h1>
           <p
-            className="
-              hidden lg:block
-              text-[#d3d3d3] font-normal
-              text-2xl leading-relaxed
-            "
-            style={{ letterSpacing: "-0.48px" }}
-          >
+            className="hidden lg:block text-[#d3d3d3] font-normal text-2xl leading-relaxed "style={{ letterSpacing: "-0.48px" }}>
             Descrubre eventos, compra tus boletos, crea experiencias
           </p>
         </div>
