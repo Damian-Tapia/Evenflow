@@ -8,6 +8,9 @@
   --light-gray: #d3d3d3;
   --input-gray: #efefef;
   --link-blue: #5c8fff;
+  
+  --primary-blue: #0047FF;
+  --accent-lime: #D4FF00;
 }
 
 @theme inline {
