@@ -11,6 +11,9 @@
   
   --primary-blue: #0047FF;
   --accent-lime: #D4FF00;
+  --ink-black-80: rgba(10, 14, 39, 0.8);
+  --ink-black-40: rgba(10, 14, 39, 0.4);
+  --accent-lime-40: rgba(212, 255, 0, 0.4);
 }
 
 @theme inline {
